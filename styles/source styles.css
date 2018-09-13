@@ -1,0 +1,95 @@
+@import url("https://use.typekit.net/bks5mwg.css");
+/* Abobe Typekit-enabled domain: kencald.github.io */
+
+/* TYPE WEIGHTS & STYLES
+------------------------
+class: .tk-source-sans-pro
+font-family: "source-sans-pro",sans-serif;
+
+class: .tk-source-serif-pro
+font-family: "source-serif-pro",serif;
+
+font-style: normal;
+    or italic
+font-weight: 400;
+    Light = 300
+    Regular = 400
+    Bold = 700
+*/
+
+html {
+    font-size: 16px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "source-serif-pro",serif;
+    font-size: 1rem;
+}
+
+nav {
+    
+}
+
+header, footer{
+
+}
+
+/* Header styles 
+--------------*/
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    line-height: 1;    
+}
+
+h1, h2, h3 {
+    font-family: "source-sans-pro",sans-serif;
+    font-style: regular;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 3.125rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4,h5,h6 {
+    font-family: "source-serif-pro",serif;
+    font-style: regular;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h5{
+    font-size: 1rem;
+}
+
+h6{
+    font-size: 0.875rem;
+}
+
+/* Paragraph styles 
+-----------------*/
+p{
+    font-family: "source-serif-pro", serif;
+    font-style: normal;
+    font-weight: 400;
+}
+.block{
+    display: block;
+}
+.italic {
+	font-style: italic;
+}
