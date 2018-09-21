@@ -83,8 +83,13 @@ ul.nav li a {
     -webkit-border-radius: 10%;
     border-radius: 10%;
 }
+ul.nav a.current-page {
+    background: #414141;
+    border: 1px solid #414141;
+    color: #fff;
+}
 ul.nav li a:hover, 
-ul.nav li a:focus{
+ul.nav li a:focus {
     background: #414141;
     border: 1px solid #414141;
     color: #fff;
@@ -135,7 +140,7 @@ h1, h2, h3 {
     font-family: "adelle-condensed",serif;
     font-style: regular;
     font-weight: 400;
-    color: midnightblue;
+    color: #00274c;
 }
 
 h1 {
