@@ -4,20 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Resume</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Ken Caldwell Portfolio</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <link rel="stylesheet" href="css/skeleton.css"> -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
-<main>
+<body>
     <header>
-        <img class="main_banner" src="images/KC-ace-banner.png" alt="Ken Caldwell Creative">
+        <section class="content-wrap">
+            <!-- <img class="main_banner" src="images/KC-ace-banner.png" alt="Ken Caldwell Creative"> -->
+            <img class="headshot" src="images/Caldwell_headshot.jpg" alt="Ken Caldwell headshot">
+            <h1>Ken Caldwell</h1>
+            <h2>Communications specialist</h2>
+            <p>Hi. I am a content person. I write, structure, and style content that is comprehensible and compelling.</p>
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html" title="Visit my main page" aria-label="Home"><i class="fal fa-home"></i>Home</a></li>
+                    <li><a href="about.html" title="Learn more about me" aria-label="About"><i class="fal fa-question"></i>About</a></li>
+                    <li><a href="portfolio.html" title="See examples of my work" aria-label="Portfolio"><i class="fal fa-pencil"></i>Portfolio</a></li>
+                    <li><a href="resume.html" title="View my education & experience" aria-label="Resume"><i class="fal fa-file"></i>Resume</a></li>
+                </ul>
+            </nav>
+        </section>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="resume.html">Resume</a></li>
-        </ul>
-    </nav>
+    <!-- Main page content -->
+    <main>
+        <section class="content-wrap">
+            <h1>Resume</h2>
+            <p><a href="images/Caldwell-Resume.pdf">Download a printable PDF (400KB).</a></p>
+            <iframe src="images/Caldwell-Resume.pdf" frameborder="0" style='width: 100%; height: 600px;'></iframe>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <section class="content-wrap">
+            <ul class="social">
+                <li><a href="https://www.linkedin.com/in/kennethcaldwell" target="_blank" aria-label="LinkedIn profile" title="LinkedIn profile"><i class="fab fa-linkedin-in"></i> </a> </li>
+                <li><a href="https://facebook.com/krcaldwell" target="_blank" aria-label="Facebook profile" title="Facebook profile"><i class="fab fa-facebook-f"></i> </a> </li>
+                <li><a href="https://instagram.com/kencodeblue" target="_blank" aria-label="Instagram profile" title="Instagram profile"><i class="fab fa-instagram"></i> </a> </li>
+                <li><a href="https://behance.net/kencaldwell" target="_blank" aria-label="Behance profile" title="Behance profile"><i class="fab fa-behance"></i> </a> </li>
+                <li><a href="https://twitter.com/kencodeblue" target="_blank" aria-label="Twitter profile" title="Twitter profile"><i class="fab fa-twitter"></i> </a> </li>
+                <li><a href="https://plus.google.com/+KenCaldwellUM" target="_blank" aria-label="Google Plus profile" title="Google+ profile"><i class="fab fa-google-plus-g"></i> </a> </li>
+                <li><a href="https://medium.com/@kencodeblue" target="_blank" aria-label="Medium profile" title="Medium profile"><i class="fab fa-medium-m"></i> </a> </li>
+            </ul>
+            <p class="#">Copyright &copy; 2018 Ken Caldwell. All rights reserved.</p>
+        </section>
+    </footer>
+
+</body>
+</html>
