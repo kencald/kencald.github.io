@@ -43,10 +43,11 @@ body {
     max-width: 750px;
 }
 .headshot {
-    width: 300px;
+    width: 175px;
     border-radius: 50%;
-    float: left; /* Soon to be on a grid or flexbox! */
-    padding-right: 30px;
+    float: left;
+    /* Soon to be on a grid or flexbox! */
+    margin-right: 30px;
 }
 header h1, header h2 {
     font-family: "adelle-condensed",serif;
@@ -60,28 +61,26 @@ header h1, header h2 {
 -----------*/
 ul.nav {
     text-align: left;
+    margin-top: 5em;
     
 }
 ul.nav li {
     display: inline-block;
 }
-ul.nav i{
-    padding-right: 10px;
-}
 ul.nav li a {
-    padding: 5px 10px;
-    margin: 5px;
+    padding: 1em;
+    margin: 10px;
     text-align: center;
     color: #676767;
-    height: 32px;
-    line-height: 32px;
-    width: 100%;
     font-size: 1em;
-    font-weight: 700;
-    text-decoration: none; 
-    border: 1px solid #979797;
-    -webkit-border-radius: 10%;
-    border-radius: 10%;
+    border: 2px solid #979797;
+    width: auto;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    text-decoration: none;
+}
+ul.nav li i {
+    margin-right: 0.5em;
 }
 ul.nav a.current-page {
     background: #414141;
