@@ -31,7 +31,7 @@ html {
 .content-wrap {
     max-width: 750px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 0 10px 0 10px;
     /* overflow: auto; */
 }
 
@@ -50,7 +50,6 @@ body {
     width: 175px;
     border-radius: 50%;
     float: left;
-    /* Soon to be on a grid or flexbox! */
     margin-right: 30px;
 }
 header h1, header h2 {
@@ -67,6 +66,7 @@ header h1, header h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 3%;
     
 }
 
@@ -75,8 +75,18 @@ nav {
 }
 
 nav ul {
+    display: normal;
+}
+
+@media (min-width: 43.75em) {
+    nav ul {
     display: flex;
-    
+    }
+}
+@media (min-width: 56.25em) {
+    nav ul {
+        display: flex;
+    }
 }
 
 nav ul li {
@@ -162,6 +172,7 @@ h1 {
     line-height: 1.25;
     /* 45px / 36px */
 }
+
 @media (min-width: 43.75em) {
     h1 {
         font-size: 2.5em;
@@ -269,24 +280,75 @@ p{
 
 
 /* PROJECT BOXES */
-@media screen and (min-width: 40em) {
-    .boxes {
-      grid-template-columns: repeat(6, 1fr);
-      grid-gap: 2px;
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+.boxes li:nth-child(1) {
+    grid-column: span 10;
+    grid-row: span 1;
+}
+.boxes li:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.boxes li:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.boxes li:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+@media (min-width: 43.75em) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
     }
     .boxes li:nth-child(1) {
-    grid-column: 1 / -1;
-    grid-row: span 2;
+    grid-column: 2;
+    grid-row: span 1;
     }
     .boxes li:nth-child(2) {
-        grid-column: span 2;
-        grid-row: span 7;
+        grid-column: span 1;
+        grid-row: span 1;
     }
     .boxes li:nth-child(3) {
-        grid-column: span 4;
-        grid-row: span 3;
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .boxes li:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }      
+}
+
+@media (min-width: 56.25em) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .boxes li:nth-child(1) {
+    grid-column: 2;
+    grid-row: span 1;
+    }
+    .boxes li:nth-child(2) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .boxes li:nth-child(3) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .boxes li:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 1;
     }
 }
+
 
 .boxes > * {
     padding: .5em;
@@ -308,6 +370,7 @@ ul.boxes {
     background-image:
       linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)),
       url(../images/ITS-social-group.jpg);
+    
 }
 .design-clinic{
     background-image:
@@ -321,6 +384,15 @@ ul.boxes {
       url(../images/SI501-presentation-02.JPG);
 
 }
+
+.SI-582{
+    background-image:
+      linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)),
+      url(../images/switch-NES-SMB.jpg);
+
+}
+
+
 .boxes li {
     background-size: cover;
     display: flex;
@@ -346,10 +418,22 @@ ul.boxes {
 
 /* IMAGES
 ----------------- */
-.thumb {
+/* .thumb {
     border: 1px solid #979797;
-    width: 20%;
+    width: 100%;
+} */
+@media screen and (orientation:portrait){
+    .thumb {
+        width: 100%;
+    }
 }
+@media screen and (orientation:landscape){
+    .thumb {
+        width: 75%;
+    }
+}
+
+
 
 
 /* LINKS
