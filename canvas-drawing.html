@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Caldwell SI539 Canvas Homework</title>
+    <style>
+        canvas {
+            border:3px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body onload="startGame()">
+
+<h1>Game Controls</h1>
+<ul>
+    <li>Move your mouse cursor, or swipe the touchscreen, to draw in the box below</li>
+    <li>Change colors with your keyboard:</li>
+    <ul>
+        <li>"b" for blue</li>
+        <li>"g" for green</li>
+        <li>"r" for red</li>
+        <li>"y" for yellow</li>
+    </ul>
+    <li>Up Arrow key: Increase pen size</li>
+    <li>Down Arrow key: Decrease pen size</li>
+    <li>Space bar: Clear the screen</li>
+</ul>
+
+<script>
+    function startGame() {
+        myGameArea.start();
+        myGamePiece = new component(20, 20, "blue", -15, -15);
+    }
+    
+    var myGameArea = {
+    canvas : document.createElement("canvas"),
+        start : function() {
+            this.canvas.width = 800;
+            this.canvas.height = 500;
+            this.canvas.style.cursor = "none";
+            this.context = this.canvas.getContext("2d");
+            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+            this.interval = setInterval(updateGameArea, 20);
+            window.addEventListener('mousemove', function (e) {
+                myGameArea.x = e.pageX;
+                myGameArea.y = e.pageY;
+            })
+            window.addEventListener('touchmove', function (e) {
+            myGameArea.x = e.touches[0].screenX;
+            myGameArea.y = e.touches[0].screenY;
+            })
+            window.addEventListener('keydown', function (e) {
+            myGameArea.key = e.keyCode;
+            })
+            window.addEventListener('keyup', function (e) {
+            myGameArea.key = false;
+            })
+        },
+        clear : function() {
+            this.context.beginPath(); // To clear the entire canvas
+        },
+        clearAll : function(){
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        }
+    }
+
+    function component(width, height, color, x, y) {
+        this.width = width;
+        this.height = height;
+        this.speedX = 0;
+        this.speedY = 0;
+        this.x = x;
+        this.y = y;
+        ctx = myGameArea.context;
+        ctx.fillStyle = color;
+        this.update = function() {
+            ctx = myGameArea.context;
+            ctx.fillStyle = this.color;
+            ctx.arc(this.x, this.y, this.width, 0, 2*Math.PI)
+            ctx.fill()
+        }
+    }
+
+    function updateGameArea() {
+        myGameArea.clear();
+        if (myGameArea.x && myGameArea.y) {
+            myGamePiece.x = myGameArea.x;
+            myGamePiece.y = myGameArea.y;        
+        }
+        if (myGameArea.key && myGameArea.key == 66) 
+            {myGamePiece.color = "blue";}
+        if (myGameArea.key && myGameArea.key == 71) 
+            {myGamePiece.color = "green";}
+        if (myGameArea.key && myGameArea.key == 82) 
+            {myGamePiece.color = "red";}
+        if (myGameArea.key && myGameArea.key == 89) 
+            {myGamePiece.color = "yellow";}
+        if (myGameArea.key && myGameArea.key == 32) 
+            {myGameArea.clearAll();}
+        if (myGameArea.key && myGameArea.key == 38) 
+            {myGamePiece.width+=1;console.log(myGameArea.width)}
+        if (myGameArea.key && myGameArea.key == 40) 
+            { if (myGamePiece.width > 1)
+                myGamePiece.width-=1;}
+        if (myGameArea.touchX && myGameArea.touchY) {
+            myGamePiece.x = myGameArea.x;
+            myGamePiece.y = myGameArea.y; 
+        }
+        myGamePiece.update();
+    }
+
+</script>
+
+</body>
+</html>
