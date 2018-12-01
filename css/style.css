@@ -1,0 +1,25 @@
+.gallery{
+	width: 95%;
+	border: 2px solid black;
+	margin:0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 10px;
+}
+
+.gallery a{
+	width: 100%;
+}
+
+.gallery a img{
+	width: 150px;
+}
+
+.item{
+	border: 2px solid black;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+  }
