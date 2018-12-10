@@ -17,6 +17,7 @@
     - Paragraph styles
 - PROJECT BOXES
 - IMAGES
+- CONTACT FORM
 - LINKS
 - FOOTER
     - Social icons
@@ -38,6 +39,34 @@ html {
 body {
     background-color: aliceblue;
     /* background-color: rgba(240, 248, 255, 0.75); */
+}
+
+/* SKIP TO CONTENT 
+------------------*/
+a.skip-main {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}
+a.skip-main:focus, a.skip-main:active {
+    color: aliceblue; 
+    background-color: #00274c;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    border-radius: 5px;
+    border:2px solid aliceblue;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
 }
 
 
@@ -415,7 +444,6 @@ ul.boxes {
     margin: 0;
 }
 
-
 /* IMAGES
 ----------------- */
 /* .thumb {
@@ -433,6 +461,8 @@ ul.boxes {
     }
 }
 
+/* CONTACT FORM 
+----------------- */
 
 
 
