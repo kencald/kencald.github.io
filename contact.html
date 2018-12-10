@@ -12,6 +12,7 @@
 </head>
 <body>
     <header>
+    <a class="skip-main" href="#main">Skip to main content</a>
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html" title="Visit my main page" aria-label="Home"><i class="fal fa-home"></i>Home</a></li>
@@ -34,29 +35,31 @@
     <main>
         <!-- Contact section -->
         <section class="content-wrap">
-            <h1>Contact me</h1>
+            <h1 id="main" tabindex="-1">Contact me</h1>
             <form action='https://www.getform.org/f/fe282647-62cc-4158-9777-091597d04fdb' method="POST">
-                <div class="#">
-                    <label for="name">Name</label> 
+                <fieldset>
                     <div class="#">
-                        <input class="form-control" name="name" id="name" type="text" placeholder="" required>
+                        <label for="name">Name</label> 
+                        <div class="#">
+                            <input class="form-control" name="name" id="name" type="text" placeholder="" required>
+                        </div>
                     </div>
-                </div>
-                <div class="#">
-                    <label for="email">Email address</label> 
                     <div class="#">
-                        <input class="#" name="email" id="email" type="email" placeholder="" required>
+                        <label for="email">Email address</label> 
+                        <div class="#">
+                            <input class="#" name="email" id="email" type="email" placeholder="" required>
+                        </div>
                     </div>
-                </div>
-                <div class="#">
-                    <label for="message" style="font-weight: normal">Message</label> 
                     <div class="#">
-                        <textarea class="#" name="message" id="message" placeholder=""></textarea>
+                        <label for="message" style="font-weight: normal">Message</label> 
+                        <div class="#">
+                            <textarea class="#" name="message" id="message" placeholder=""></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="#">
-                    <button type="submit" class="#">Submit</button>
-                </div>
+                    <div class="#">
+                        <button type="submit" class="#">Submit</button>
+                    </div>
+                </fieldset>
             </form>
         </section>
     </main>
