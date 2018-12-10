@@ -88,6 +88,10 @@ header h1, header h2 {
     margin: 0;
 }
 
+.space-after{
+    padding-bottom: .75em;
+}
+
 
 /* NAV
 -----------*/
