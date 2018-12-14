@@ -2,7 +2,7 @@
 @import "../fonts/font-awesome/css/fontawesome-all.min.css";
 
 /* Google Fonts */
-@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:700); */
 
 /* Abobe Typekit for kencald.github.io */
 @import url("https://use.typekit.net/bks5mwg.css");
@@ -21,6 +21,7 @@
 - LINKS
 - FOOTER
     - Social icons
+- SCROLL TO TOP
 */
 
 /* GLOBAL 
@@ -55,6 +56,7 @@ a.skip-main {
 a.skip-main:focus, a.skip-main:active {
     color: aliceblue; 
     background-color: #00274c;
+    font-family: adelle-sans, sans-serif;
     left: 0;
     top: 0;
     width: 30%;
@@ -135,7 +137,7 @@ nav ul li a {
     padding: .5em 1em;
     text-decoration: none;
     font-weight: 700;
-    font-family: 'Roboto', sans-serif;
+    font-family: adelle-sans, sans-serif;
 }
 
 nav ul li a i {
@@ -510,3 +512,30 @@ ul.social li a:focus{
     border: 1px solid #414141;
     color: #fff;
 }
+
+
+/* SCROLL TO TOP
+---------------- */
+
+#scrollButton {
+    display: none;
+    position: fixed;
+    bottom: 1.5em;
+    right: 2em;
+    z-index: 99;
+    font-size: 1em;
+    font-family: adelle-sans, sans-serif;
+    border: 2px solid aliceblue;
+    outline: none;
+    background-color: #00274c;
+    color: aliceblue;
+    cursor: pointer;
+    padding: 0.5em 1.5em;
+    border-radius: 0;
+  }
+  
+  #scrollButton:hover {
+    background-color: aliceblue;
+    color: #00274c;
+    border: 2px solid #00274c;
+  }
