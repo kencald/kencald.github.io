@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript" src="http://w2ui.com/src/w2ui-1.4.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.4.2.min.css" />
+
 </head>
 <body>
     <header>
@@ -21,10 +27,11 @@
                 <li><a href="contact.html" title="Get in touch" aria-label="Contact"><i class="fal fa-envelope"></i>Contact</a></li>
             </ul>
         </nav>
+
+        <button onclick="topFunction()" id="scrollButton" title="Scroll to the top">Top</button>
         
         <section class="content-wrap space-after">
             <img class="headshot" src="images/Caldwell_headshot.jpg" alt="Ken Caldwell headshot">
-            
             <h1>Ken Caldwell</h1>
             <h2>Word designer</h2>
             <p>I write, structure, and style content to convey information that is clear and compelling.</p>
@@ -41,7 +48,7 @@
         <div class="grid-container content-wrap">
 
             <ul class="boxes">
-                <li class="ITS-social">
+                <li class="ITS-social" aria-label="L–R: Madi Atkins, Ken Caldwell, Sam DeRosia, Annaliese Gottschalk, & Amanda Brown">
                     <div class="boxes__text-wrapper">
                         <h2 class="project-title">Social media content strategy</h2>
                         <p class="project-body">A Twitter content strategy project supported by quantitative research.</p>
@@ -49,7 +56,7 @@
                 </li>
             </ul>
             <ul class="boxes">
-                <li class="design-clinic">
+                <li class="design-clinic" aria-label="The Canopy-Design Clinic team pictured at the semester's culminating event">
                     <div class="boxes__text-wrapper">
                         <h2 class="project-title">UMSI Design Clinic</h2>
                         <p class="project-body">A client project with qualitative interviews, card sorting, and more.</p>
@@ -58,7 +65,7 @@
             </ul>
             
             <ul class="boxes">
-                    <li class="SI-582">
+                    <li class="SI-582" aria-label="An interactive prototype for the Netflix of Nintendo games">
                         <div class="boxes__text-wrapper">
                             <h2 class="project-title">Interaction Design</h2>
                             <p class="project-body">I created an interactive prototype for the Netflix of Nintendo games.</p>
@@ -67,7 +74,7 @@
             </ul>
 
             <ul class="boxes">
-                    <li class="SI-501">
+                    <li class="SI-501" aria-label="Team Helios presents their findings to colleagues    ">
                         <div class="boxes__text-wrapper">
                             <h2 class="project-title">Contextual Inquiry</h2>
                             <p class="project-body">Consulting with affinity diagramming to identify key findings.</p>
@@ -88,49 +95,51 @@
             <p id="main" tabindex="-1">In my role at U-M Information and Technology Services, I initiated a content strategy project to reinvigorate ITS’s use of Twitter as supported by quantitative research. As social media lead for my unit, I created a project charge, sought leadership approval, then led a team of interns through a crash-course in UX research methodology. The structure I imposed included periods of scoping and discovery, audience analysis, and content design. Ultimately, we produced a set of detailed guidelines and evidence-based recommendations for contributing staff writers to build engagement with the target audience.</p>
 
             <div>
-                <a href="images/ITS-social-group.jpg"><img class="thumb" src="images/ITS-social-group.jpg" alt="L–R: Madi Atkins, Ken Caldwell, Sam DeRosia, Annaliese Gottschalk, & Amanda Brown"></a>
-                <div class="photo-caption">The project team from L&ndash;R: Madi Atkins, Ken Caldwell, Sam DeRosia, Annaliese Gottschalk, &amp; Amanda Brown</div>
+                <img class="btn popup_image" style="width:75%; height:auto" src="images/ITS-social-group.jpg" alt="L–R: Madi Atkins, Ken Caldwell, Sam DeRosia, Annaliese Gottschalk, & Amanda Brown" aria-label="L–R: Madi Atkins, Ken Caldwell, Sam DeRosia, Annaliese Gottschalk, & Amanda Brown">
             </div>
 
             <div>
-                <a href="images/ITS-social-poster.jpeg"><img class="thumb" src="images/ITS-social-poster.jpeg" alt="A presentation poster outlines the project's goal, solution, research protocol, and next steps."></a>
-                <div class="photo-caption">The team's poster outlines recommendations for staff content contributors</div>
+                    <img class="btn popup_image" style="width:75%; height:auto" src="images/ITS-social-poster.jpeg" alt="A presentation poster outlines the project's goal, solution, research protocol, and next steps." aria-label="A presentation poster outlines the project's goal, solution, research protocol, and next steps.">
             </div>
+
+            <div class="photo-caption">The team's poster outlines recommendations for staff content contributors</div>
 
 
             <h3>UMSI Design Clinic</h3>
             <h4>Winter 2018</h4>
             <p>I volunteered for <a href="https://si.umich.edu/programs/professional-and-community-engagement/design-clinic" target="_blank">UMSI Design Clinic</a> (now called infoLab) to bring my user experience research and design skills to fruition outside of the classroom. What an experience! I learned so much through a rigorous research process: qualitative interviews, card sorting exercises, comparative user tests, and more. I even contributed to the team’s more concrete deliverables like a user journey and a web-based, interactive prototype for our client—a student startup called Canopy.</p>
 
+            
             <div>
-                <a href="images/DC-Canopy-group-04.jpg"><img class="thumb" src="images/DC-Canopy-group-04.jpg" alt="The Canopy-Design Clinic team pictured at the semester's culminating event"></a>
-                <div class="photo-caption">The Canopy-Design Clinic team from L–R: Ken Caldwell, Brandon Keelan (client contact), Chuhan Hou, Huyen Phan, Mandy Shen, Chen Li, and Aalap Doshi (group mentor).</div>
+                <img class="btn popup_image" style="width:75%; height:auto" src="images/DC-Canopy-group-04.jpg" alt="The Canopy-Design Clinic team pictured at the semester's culminating event" aria-label="The Canopy-Design Clinic team pictured at the semester's culminating event">
+            </div>
+
+            <div class="photo-caption">The Canopy-Design Clinic team from L–R: Ken Caldwell, Brandon Keelan (client contact), Chuhan Hou, Huyen Phan, Mandy Shen, Chen Li, and Aalap Doshi (group mentor).</div>
+            
+            <div>
+                <img class="btn popup_image" style="width:75%; height:auto" src="images/DC-Canopy-group-02.jpg" alt="The Canopy-Design Clinic team at work" aria-label="The Canopy-Design Clinic team at work">
             </div>
 
             <div>
-                <a href="images/DC-Canopy-group-02.jpg"><img class="thumb" src="images/DC-Canopy-group-02.jpg" alt="The Canopy-Design Clinic team at work"></a>
-                <div class="photo-caption"></div>
+                <img class="btn popup_image" style="width:75%; height:auto" src="images/DC-Canopy-group-02.jpg" alt="The Canopy-Design Clinic team at work" aria-label="The Canopy-Design Clinic team at work">
             </div>
 
             <div>
-                <a href="images/DC-Canopy-group-03.jpg"><img class="thumb" src="images/DC-Canopy-group-03.jpg" alt="The Canopy-Design Clinic team at a weekly meeting"></a>
-                <div class="photo-caption"></div>
+                <img class="btn popup_image" style="width:75%; height:auto" src="images/DC-Canopy-group-03.jpg" alt="The Canopy-Design Clinic team at a weekly meeting" aria-label="The Canopy-Design Clinic team at a weekly meeting">
             </div>
 
             <div>
-                <a href="images/DC-Canopy-poster-public-150.jpg"><img class="thumb" src="images/DC-Canopy-poster-public-150.jpg" alt="Final poster describes the project design, major findings, and rationale"></a>
-                <div class="photo-caption"></div>
+                <img class="btn popup_image" style="width:75%; height:auto" src="images/DC-Canopy-poster-public-150.jpg" alt="Final poster describes the project design, major findings, and rationale" aria-label="Final poster describes the project design, major findings, and rationale">
             </div>
 
             <div>
-                <a href="images/DC-Canopy-process.jpg"><img class="thumb" src="images/DC-Canopy-process.jpg" alt="A detailed look at the process shows the iterative design to test, analyze, design, and ideate"></a>
-                <div class="photo-caption"></div>
+                <img class="btn popup_image" style="width:75%; height:auto" src="images/DC-Canopy-process.jpg" alt="A detailed look at the process shows the iterative design to test, analyze, design, and ideate" aria-label="A detailed look at the process shows the iterative design to test, analyze, design, and ideate">
             </div>
 
             <div>
-                <a href="images/DC-Canopy-whiteboard-01.jpg"><img class="thumb" src="images/DC-Canopy-whiteboard-01.jpg" alt="A planning board outlines project deliverables and timeline"></a>
-                <div class="photo-caption"></div>
-            </div>        
+                <img class="btn popup_image" style="width:75%; height:auto" src="images/DC-Canopy-whiteboard-01.jpg" alt="A planning board outlines project deliverables and timeline" aria-label="A planning board outlines project deliverables and timeline">
+            </div>
+
 
 
             <h3>Contextual Inquiry</h3>
